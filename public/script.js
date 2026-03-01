@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  /* ---- Leaflet.js — Interactive Map ---- */
+  /* ---- 5. Leaflet.js — Interactive Map ---- */
   var mapEl = document.getElementById('map');
   if (mapEl) {
     setTimeout(function () {
