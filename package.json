@@ -1,0 +1,15 @@
+{
+  "name": "juncheng_js-libraries",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "start": "lite-server --baseDir=\"public\""
+  },
+  "keywords": [],
+  "author": "June",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}

@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>veda contemporary art museum</title>
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Fallback if style.css is at root level -->
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+
+    <!-- Glide CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css"
+    />
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Lightbox CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+
+    <!-- Header -->
+    <header class="site-header">
+
+      <!-- Mobile only: hamburger -->
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Logo -->
+      <div class="logo-wrapper">
+        <a href="#">
+          <img src="assets/images/Logo.png" alt="VèDA Contemporary Art Museum" class="logo-img" />
+        </a>
+      </div>
+
+      <!-- Mobile only: search -->
+      <button class="mobile-search-btn" id="mobileSearchBtn" aria-label="Search">
+        <i class="fas fa-search"></i>
+      </button>
+
+      <!-- Desktop nav -->
+      <nav class="main-nav" id="mainNav">
+        <a href="#about">About</a>
+        <a href="#exhibition" class="active">Exhibitions</a>
+        <a href="#gallery">Collection</a>
+        <a href="#location">Visit Us</a>
+      </nav>
+
+    </header>
+
+    <!-- Mobile nav overlay -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay">
+      <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">
+        <i class="fas fa-times"></i>
+      </button>
+      <nav class="mobile-nav-links">
+        <a href="#about"      onclick="closeMobileNav()">About</a>
+        <a href="#exhibition" onclick="closeMobileNav()">Exhibitions</a>
+        <a href="#gallery"    onclick="closeMobileNav()">Collection</a>
+        <a href="#location"   onclick="closeMobileNav()">Visit Us</a>
+      </nav>
+    </div>
+
+    <!-- Hero slider -->
+    <section class="hero-section" aria-label="Featured exhibitions">
+      <div class="glide" id="heroGlide">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide__slide">
+              <img src="assets/images/AdobeStock_1093305953.jpeg" alt="Exhibition 1" />
+            </li>
+            <li class="glide__slide">
+              <img src="assets/images/AdobeStock_1094570245.jpeg" alt="Exhibition 2" />
+            </li>
+            <li class="glide__slide">
+              <img src="assets/images/AdobeStock_1238892018.jpeg" alt="Exhibition 3" />
+            </li>
+            <li class="glide__slide">
+              <img src="assets/images/AdobeStock_1694107202.jpeg" alt="Exhibition 4" />
+            </li>
+            <li class="glide__slide">
+              <img src="assets/images/AdobeStock_1799604502.jpeg" alt="Exhibition 5" />
+            </li>
+          </ul>
+        </div>
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="glide__arrow glide__arrow--left" data-glide-dir="<" aria-label="Previous">&#8249;</button>
+          <button class="glide__arrow glide__arrow--right" data-glide-dir=">" aria-label="Next">&#8250;</button>
+        </div>
+        <div class="glide__bullets" data-glide-el="controls[nav]">
+          <button class="glide__bullet" data-glide-dir="=0" aria-label="Slide 1"></button>
+          <button class="glide__bullet" data-glide-dir="=1" aria-label="Slide 2"></button>
+          <button class="glide__bullet" data-glide-dir="=2" aria-label="Slide 3"></button>
+          <button class="glide__bullet" data-glide-dir="=3" aria-label="Slide 4"></button>
+          <button class="glide__bullet" data-glide-dir="=4" aria-label="Slide 5"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CURRENT EXHIBITION ===== -->
+    <section id="exhibition" class="exhibition-section" data-aos="fade-up">
+      <h2>Current Exhibition</h2>
+      <a href="#gallery" class="exhibition-btn">
+        Explore Exhibition <i class="fas fa-arrow-right"></i>
+      </a>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- About -->
+    <section id="about" class="about-section">
+
+      <!-- CSS cycling word animation — two lines, centred -->
+      <div class="about-tagline" data-aos="fade-up">
+        <div class="tagline-line1">VèDA is a place for</div>
+        <div class="tagline-line2">
+          <span class="tagline-cycling">
+            <span class="cycling-word">ideas</span>
+            <span class="cycling-word">curiosity</span>
+            <span class="cycling-word">provocation</span>
+            <span class="cycling-word">silence</span>
+            <span class="cycling-word">beauty</span>
+            <span class="cycling-word">discovery</span>
+            <span class="cycling-word">dialogue</span>
+          </span>
+        </div>
+      </div>
+
+      <div class="about-grid">
+
+        <div class="about-text-col" data-aos="fade-right" data-aos-delay="100">
+          <h2>About The Museum</h2>
+
+          <p>VèDA Contemporary Art Museum was founded in <strong>1987</strong> by
+          <strong>Elena Vasiliev</strong>, a Romanian-born sculptor who immigrated to
+          New Zealand in the late 1970s. After years of exhibiting her own work in
+          makeshift warehouse spaces across Auckland, Elena grew frustrated by the lack
+          of a dedicated venue for radical, non-commercial art in the city.</p>
+
+          <p>With a modest bank loan, a donated building on Gallery Lane, and the
+          volunteer labour of seventeen local artists, she opened VèDA's doors on
+          <strong>14 March 1987</strong>. The name VèDA — derived from the Sanskrit
+          word for knowledge — reflected her conviction that art and learning were
+          inseparable.</p>
+
+          <p>Today, VèDA's permanent collection spans over <strong>4,200 works</strong>
+          across painting, sculpture, digital installation, and performance
+          documentation. Our rotating programme hosts <strong>18–24 exhibitions</strong>
+          per year, drawing from both established international names and emerging
+          Pacific Rim artists through our residency programme.</p>
+
+          <p>Elena passed away in 2019, but her founding principle endures:
+          <em>&ldquo;Art is not a luxury. It is the record of what it meant to be
+          alive.&rdquo;</em></p>
+        </div>
+
+        <div class="about-stats-col" data-aos="fade-left" data-aos-delay="200">
+          <div class="about-stat-card"><span class="about-stat-num">1987</span><span class="about-stat-label">Year Founded</span></div>
+          <div class="about-stat-card"><span class="about-stat-num">4,200+</span><span class="about-stat-label">Works in Collection</span></div>
+          <div class="about-stat-card"><span class="about-stat-num">38</span><span class="about-stat-label">Years of Exhibition</span></div>
+          <div class="about-stat-card"><span class="about-stat-num">120k</span><span class="about-stat-label">Annual Visitors</span></div>
+
+          <div class="about-founder-card">
+            <img src="https://api.dicebear.com/7.x/personas/svg?seed=elena&backgroundColor=e0d8cc" alt="Elena Vasiliev" class="founder-img" />
+            <div>
+              <strong>Elena Vasiliev</strong>
+              <span class="founder-dates">1941 – 2019</span>
+              <span class="founder-title">Founder &amp; Director Emerita</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- Featured collection -->
+    <section id="gallery" class="gallery-section" data-aos="fade-up">
+      <h2>Featured Collection</h2>
+      <div class="gallery-grid">
+
+        <a href="assets/images/AdobeStock_929217889.jpeg"
+           data-lightbox="gallery" data-title="Untitled No. 1"
+           data-aos="fade-up" data-aos-delay="0">
+          <img src="assets/images/AdobeStock_929217889.jpeg" alt="Artwork 1" />
+        </a>
+
+        <a href="assets/images/AdobeStock_1915999625.jpeg"
+           data-lightbox="gallery" data-title="Untitled No. 2"
+           data-aos="fade-up" data-aos-delay="100">
+          <img src="assets/images/AdobeStock_1915999625.jpeg" alt="Artwork 2" />
+        </a>
+
+        <a href="assets/images/AdobeStock_1862337080.jpeg"
+           data-lightbox="gallery" data-title="Untitled No. 3"
+           data-aos="fade-up" data-aos-delay="200">
+          <img src="assets/images/AdobeStock_1862337080.jpeg" alt="Artwork 3" />
+        </a>
+
+        <a href="assets/images/AdobeStock_1880140540.jpeg"
+           data-lightbox="gallery" data-title="Untitled No. 4"
+           data-aos="fade-up" data-aos-delay="300">
+          <img src="assets/images/AdobeStock_1880140540.jpeg" alt="Artwork 4" />
+        </a>
+
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- Visitor stats -->
+    <section id="stats" class="stats-section" data-aos="fade-up">
+      <h2>Visitor Statistics</h2>
+      <p class="stats-desc">
+        Annual visitor numbers from 2019–2024. Despite a dip during 2020 lockdowns,
+        VèDA has seen record-breaking attendance each year since reopening.
+      </p>
+      <div class="chart-wrapper">
+        <canvas id="visitorChart"></canvas>
+      </div>
+      <p class="chart-source">Source: VèDA Museum Annual Reports 2019–2024</p>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- Make an appointment -->
+    <section id="appointment" class="appointment-section" data-aos="fade-up">
+      <h2>Make an Appointment</h2>
+      <p class="appt-desc">Book a private guided tour or group visit with one of our curators.</p>
+
+      <form class="appt-form" id="apptForm" novalidate>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="apptName">Full Name</label>
+            <input
+              type="text" id="apptName" name="apptName"
+              placeholder="Your full name" required
+            />
+            <span class="field-error" id="nameError">Please enter your name.</span>
+          </div>
+          <div class="form-group">
+            <label for="apptEmail">Email Address</label>
+            <input
+              type="email" id="apptEmail" name="apptEmail"
+              placeholder="your@email.com" required
+            />
+            <span class="field-error" id="emailError">Please enter a valid email.</span>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="apptDate">Preferred Date</label>
+            <input type="date" id="apptDate" name="apptDate" required />
+            <span class="field-error" id="dateError">Please select a date.</span>
+          </div>
+          <div class="form-group">
+            <label for="apptGroup">Group Size</label>
+            <select id="apptGroup" name="apptGroup" required>
+              <option value="">Select group size</option>
+              <option value="1-2">1–2 people</option>
+              <option value="3-10">3–10 people</option>
+              <option value="11-20">11–20 people</option>
+              <option value="20+">20+ people</option>
+            </select>
+            <span class="field-error" id="groupError">Please select a group size.</span>
+          </div>
+        </div>
+
+        <div class="form-group full-width">
+          <label for="apptMsg">
+            Special Requests <span class="optional">(optional)</span>
+          </label>
+          <textarea
+            id="apptMsg" name="apptMsg" rows="3"
+            placeholder="Accessibility needs, focus areas…"
+          ></textarea>
+        </div>
+
+        <button type="submit" class="appt-submit">Request Appointment</button>
+
+        <p class="appt-success" id="apptSuccess">
+          ✓ Your request has been sent. We will be in touch within 2 business days.
+        </p>
+
+      </form>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- Location -->
+    <section id="location" class="location-section" data-aos="fade-up">
+      <h2>Where You Can Find Us</h2>
+      <address class="museum-address">
+        123 Gallery Lane, Auckland CBD<br />
+        Auckland 1010, New Zealand
+      </address>
+      <div class="hours-grid">
+        <p><strong>Tue – Fri</strong> &nbsp;10:00 – 18:00</p>
+        <p><strong>Sat – Sun</strong> &nbsp;10:00 – 20:00</p>
+        <p><strong>Mon</strong> &nbsp;Closed</p>
+      </div>
+      <div id="map"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-container">
+        <p>© 2026 VèDA Contemporary Art Museum</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+
+    <!-- Library 1: Glide.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+
+    <!-- Library 2: AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- jQuery (required by Lightbox2) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Library 3: Lightbox2 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
+    <!-- Library 4: Chart.js (visitor stats chart) -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Leaflet -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!-- Main script -->
+    <script src="script.js"></script>
+
+  </body>
+</html>
